@@ -1,0 +1,36 @@
+<style>
+	#columnBrowser{
+		border-bottom:1px solid #7c7c84;
+	}
+</style>
+<px-card class="main-card" style="padding:0;margin:0;">
+	<px-context-browser
+		id="contextBrowser"
+		label-field="name"
+		id-field="id"
+		opened-item-name="Light"
+		initial-contexts="{{initialBrowserContext}}"
+		show-chevron="true">
+	</px-context-browser>
+	<px-modal id="adminaddmodal" class="modalb"  modal-heading="Upload Floor Plan" btn-modal-positive="Submit"  btn-modal-negative="Back">
+		<a href="javascript:void(0);" class='modal-trigger' style="color:black;display:none;"><i class="fa fa-plus style-scope"></i>Add</a>
+		<table class="tbldata">
+			<tr><td class="lbltd"><input id="uploadfilebox" type="file" accept="image/*"/></td><td>
+			<tr><td id="percentageuploaded">0% uploaded</td></tr>
+			<tr><td><img id="floorplan" src="" style="height:200px;width:200px;" /></td></tr>
+			<tr id="noimagetxt" style="display:none;"><td>No image uploaded</td></tr>
+		</table>
+	</px-modal>
+	<px-modal id="additemmodal" class="modalb"  modal-heading="Add Building" btn-modal-positive="Submit"  btn-modal-negative="Back">
+		<a href="javascript:void(0);" class='modal-trigger' style="color:black;display:none;"><i class="fa fa-plus style-scope"></i>Add</a>
+		<table class="tbldata">
+			<tr><td class="lbltd">Name: </td><td><input id="itemname" type="text" style="border:1px solid #000;"/></td></tr>
+		</table>
+	</px-modal>
+	<px-modal id="edititemmodal" class="modalb"  modal-heading="Update Building" btn-modal-positive="Submit"  btn-modal-negative="Back">
+		<a href="javascript:void(0);" class='modal-trigger' style="color:black;display:none;"><i class="fa fa-plus style-scope"></i>Add</a>
+		<table class="tbldata">
+			<tr><td class="lbltd">Name: </td><td><input id="itemeditname" type="text" style="border:1px solid #000;"/></td></tr>
+		</table>
+	</px-modal>
+</px-card>

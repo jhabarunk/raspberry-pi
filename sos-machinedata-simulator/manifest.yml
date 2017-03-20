@@ -1,0 +1,12 @@
+---
+applications:
+  - name: sos-machinedata-simulator
+    buildpack: java-buildpack
+    path: target/sos-machinedata-simulator-4.0.0.jar
+    timeout: 120
+env:
+    machineControllerId: 1
+    predix_dataingestion_service_uri: https://sos-dataingestion-service.run.aws-usw02-pr.ice.predix.io
+   
+     
+    

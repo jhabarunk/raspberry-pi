@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./public/scripts/modules/sample-module/dashboard-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">./public/scripts/modules/sample-module/dashboard-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">6.67% <small>(2 / 30)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">11.11% <small>(1 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">6.67% <small>(2 / 30)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">./public/scripts/modules/sample-module/</a> &#187; dashboard-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Renders all the widgets on the tab and triggers the datasources that are used by the widgets.
+ * Customize your widgets by:
+ *  - Overriding or extending widget API methods
+ *  - Changing widget settings or options
+ */
+/* jshint unused: false */
+define(['angular',
+    './sample-module'
+], function (angular, controllers) {
+    'use strict';
+&nbsp;
+    // Controller definition
+    controllers.controller('DashboardCtrl', ['$scope', '$log', 'PredixAssetService', 'PredixLiveDataService',
+<span class="fstat-no" title="function not covered" >            function ($scope, $log, PredixAssetService, PredixLiveDataService) {</span>
+&nbsp;
+        // on initial load, get the top level groups:
+<span class="cstat-no" title="statement not covered" >        PredixAssetService.getRmdRefAppEntities({uri: '/group/root'}).then(<span class="fstat-no" title="function not covered" >function (initialContext) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.initialContexts = initialContext;</span>
+        }, <span class="fstat-no" title="function not covered" >function (message) {</span>
+<span class="cstat-no" title="statement not covered" >            $log.error(message);</span>
+        });
+&nbsp;
+        // Since it's difficult to set up web socket proxying, we'll just get the web socket URL here in the browser for now:
+<span class="cstat-no" title="statement not covered" >        PredixLiveDataService.getWsUrl().then(<span class="fstat-no" title="function not covered" >function(urlData) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.wsUrl = urlData.wsUrl + '/livestream';</span>
+        }, <span class="fstat-no" title="function not covered" >function (msg) {</span>
+<span class="cstat-no" title="statement not covered" >            $log.error(msg);</span>
+        });
+&nbsp;
+        // Take an asset object defined in the Ref App asset model,
+        //  and create a list of parameters to display.
+<span class="cstat-no" title="statement not covered" >        $scope.getPickerOptionsFromAsset = <span class="fstat-no" title="function not covered" >function (asset) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var pickerOptions = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (asset.assetTag) {</span>
+<span class="cstat-no" title="statement not covered" >                for(var key in asset.assetTag) {</span>
+<span class="cstat-no" title="statement not covered" >                    var m = asset.assetTag[key];</span>
+<span class="cstat-no" title="statement not covered" >                    var option = {</span>
+                        sourceTagId: m.sourceTagId,
+                        meterUri: m.tagUri,
+                        thresholdHigh: m.outputMaximum,
+                        thresholdLow: m.outputMinimum,
+                        wsUrl: $scope.wsUrl + m.tagDatasource.machineUri,
+                        label: key
+                    };
+<span class="cstat-no" title="statement not covered" >                    pickerOptions.push(option);</span>
+                }
+            }
+<span class="cstat-no" title="statement not covered" >            return pickerOptions;</span>
+        };
+&nbsp;
+        // callback for when the Open button is clicked
+<span class="cstat-no" title="statement not covered" >        $scope.openContext = <span class="fstat-no" title="function not covered" >function (contextDetails) {</span></span>
+&nbsp;
+            // need to clean up the context details so it doesn't have the infinite parent/children cycle,
+            // which causes problems later (can't interpolate: {{context}} TypeError: Converting circular structure to JSON)
+<span class="cstat-no" title="statement not covered" >            var newContext = angular.copy(contextDetails);</span>
+<span class="cstat-no" title="statement not covered" >            newContext.children = [];</span>
+<span class="cstat-no" title="statement not covered" >            newContext.parent = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            newContext.pickerOptions = $scope.getPickerOptionsFromAsset(newContext);</span>
+<span class="cstat-no" title="statement not covered" >            $scope.context = newContext;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (newContext.uri.indexOf('group') &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.selectedDeck = 'cards/group-deck.html';</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                $scope.selectedDeck = 'cards/compressor-deck.html';</span>
+            }
+<span class="cstat-no" title="statement not covered" >            document.querySelector('#dashboard-description-card').hidden = true;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.$digest();</span>
+        };
+&nbsp;
+        // this function called "getChildren" is called by the px-context-browser
+<span class="cstat-no" title="statement not covered" >        $scope.getChildren = <span class="fstat-no" title="function not covered" >function (parent, options) {</span></span>
+            // call a custom function developed for this application:
+<span class="cstat-no" title="statement not covered" >            return PredixAssetService.getRmdRefAppEntities(parent);</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.handlers = {</span>
+            itemOpenHandler: $scope.openContext,
+            getChildren: $scope.getChildren
+            // (optional) click handler: itemClickHandler: $scope.clickHandler
+        };
+&nbsp;
+    }]);
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Sep 15 2016 10:43:33 GMT+0530 (India Standard Time)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

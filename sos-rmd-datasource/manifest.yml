@@ -1,0 +1,27 @@
+#inherit: base-manifest.yml
+applications:
+  - name: sos-rmd-datasource-app
+    buildpack: java-buildpack
+    path: target/sos-rmd-datasource-1.0.0-RELEASE.jar
+    memory: 1GB
+    instances: 1
+    services:
+      - sos-asset
+      - sos-timeseries
+      - sos-uaa
+
+env:
+    predix_timeseries_name : sos-timeseries
+    predix_oauth_restHost : 5df08919-1ad4-49bd-975a-dd83f706f78e.predix-uaa.run.aws-usw02-pr.ice.predix.io
+    predix_oauth_clientId : app_client_1:secret
+    predix_timeseries_connectionTimeout : 5000
+    predix_asset_connectionTimeout : 5000
+    predix_rest_socketTimeout : 5000
+    predix_rest_poolMaxSize: 200
+    predix_timeseries_ws_retry_attempt: 1
+    #used by predix acs-spring-security-extensions
+    accessTokenEndpointUrl : https://5df08919-1ad4-49bd-975a-dd83f706f78e.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token
+    clientId : app_client_1
+    clientSecret: secret
+    #used by predix uaa-token-lib
+    trustedIssuerIdsRegexPattern : ^https://(.*\\.)?predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token$ 

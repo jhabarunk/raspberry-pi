@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./public/scripts/modules/sample-module/spec/predix-asset-service-spec.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">./public/scripts/modules/sample-module/spec/predix-asset-service-spec.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4.9% <small>(5 / 102)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">3.7% <small>(1 / 27)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4.9% <small>(5 / 102)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../../index.html">All files</a> &#187; <a href="index.html">./public/scripts/modules/sample-module/spec/</a> &#187; predix-asset-service-spec.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * These are actual tests for the Predix Asset Service.  Take 'em of leave 'em. :)
+ */
+define(['angular', 'angular-mocks', 'app'], function(angular) {
+    'use strict';
+&nbsp;
+    var topLevelData = [
+        {
+            'assetId': '001-1',
+            'description': 'Mustang',
+            'uri': '001-1',
+            'classification': 'car',
+            'parent': null,
+            'attributes': {
+                isNotOpenable: false
+            }
+        },
+        {
+            'assetId': '001-2',
+            'description': 'Sandy',
+            'uri': '001-2',
+            'classification': 'car',
+            'parent': null,
+            'attributes': {
+                isNotOpenable: false
+            }
+        },
+        {
+            'assetId': '001-3',
+            'description': 'Nothing',
+            'uri': '001-3',
+            'classification': 'car',
+            'parent': null,
+            'attributes': {
+                isNotOpenable: false
+            }
+        }
+    ];
+&nbsp;
+    var secondLevelData = [
+        {
+            'assetId': '001-1-1',
+            'description': 'Wheels',
+            'uri': '001-1-1',
+            'classification': 'car',
+            'parent': '001-1',
+            'attributes': {
+                isNotOpenable: false
+            }
+        },
+        {
+            'assetId': '001-1-2',
+            'description': 'Brakes',
+            'uri': '001-1-2',
+            'classification': 'car',
+            'parent': '001-1',
+            'attributes': {
+                isNotOpenable: false
+            }
+        }
+    ];
+&nbsp;
+    var baseUrl = '/api';
+&nbsp;
+&nbsp;
+    xdescribe('The Predix Asset Service', <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var PredixAssetService, $log, $httpBackend, q, successCallback, errorCallback, $rootScope;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        beforeEach(module('predixApp'));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        beforeEach(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            angular.module('testModule', ['predixApp']);</span>
+<span class="cstat-no" title="statement not covered" >            module('testModule');</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        beforeEach(inject(<span class="fstat-no" title="function not covered" >function(_PredixAssetService_, _$httpBackend_, _$rootScope_, $q, _$log_) {</span></span>
+<span class="cstat-no" title="statement not covered" >            PredixAssetService = _PredixAssetService_;</span>
+<span class="cstat-no" title="statement not covered" >            $httpBackend = _$httpBackend_;</span>
+<span class="cstat-no" title="statement not covered" >            $rootScope = _$rootScope_;</span>
+<span class="cstat-no" title="statement not covered" >            q = $q;</span>
+<span class="cstat-no" title="statement not covered" >            $log = _$log_;</span>
+        }));
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        describe('with predix asset service', <span class="fstat-no" title="function not covered" >function() {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            describe('when getting asset root', <span class="fstat-no" title="function not covered" >function() {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                beforeEach(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    successCallback = jasmine.createSpy('successCallback');</span>
+<span class="cstat-no" title="statement not covered" >                    errorCallback = jasmine.createSpy('errorCallback');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.when('GET', baseUrl + '/asset?pageSize=100&amp;topLevelOnly=true&amp;filter=parent=null').respond(topLevelData);</span>
+<span class="cstat-no" title="statement not covered" >                    PredixAssetService.getAssetsByParentId(null).then(successCallback, errorCallback);</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                it('will fetch context root with default url and rootEntityId null', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.expectGET(baseUrl + '/asset?pageSize=100&amp;topLevelOnly=true&amp;filter=parent=null');</span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.flush();</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                it('will resolve the promise with the default transformed data', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.flush();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    var context = successCallback.calls[0].args[0].data;</span>
+<span class="cstat-no" title="statement not covered" >                    var assetData = topLevelData[0];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    expect(context.length).toBe(topLevelData.length);</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context[0].name).toBe(assetData.assetId);</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context[0].id).toBe(assetData.uri);</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context[0].classification).toBe(assetData.classification);</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context[0].parentId).toBe(assetData.parent);</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context[0].isOpenable).toBe(!(assetData.attributes &amp;&amp; assetData.attributes.isNotOpenable));</span>
+                });
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            describe('when response fails getting asset root', <span class="fstat-no" title="function not covered" >function() {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                beforeEach(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    successCallback = jasmine.createSpy('successCallback');</span>
+<span class="cstat-no" title="statement not covered" >                    errorCallback = jasmine.createSpy('errorCallback');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.when('GET', baseUrl + '/asset?pageSize=100&amp;topLevelOnly=true&amp;filter=parent=null').respond(500);</span>
+<span class="cstat-no" title="statement not covered" >                    PredixAssetService.getAssetsByParentId(null).then(successCallback, errorCallback);</span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.flush();</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                it('reject promise if the GET fails', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    expect(errorCallback).toHaveBeenCalledWith('Error fetching asset with id ' + null);</span>
+                });
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            describe('when getting the children of an asset', <span class="fstat-no" title="function not covered" >function() {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                beforeEach(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    successCallback = jasmine.createSpy('successCallback');</span>
+<span class="cstat-no" title="statement not covered" >                    errorCallback = jasmine.createSpy('errorCallback');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.when('GET', baseUrl + '/asset?pageSize=100&amp;topLevelOnly=true&amp;filter=parent=24').respond(secondLevelData);</span>
+<span class="cstat-no" title="statement not covered" >                    PredixAssetService.getAssetsByParentId(24).then(successCallback, errorCallback);</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                it('will fetch asset root with default url and rootEntityId 24', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.expectGET(baseUrl + '/asset?pageSize=100&amp;topLevelOnly=true&amp;filter=parent=24');</span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.flush();</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                it('will resolve the promise with the default transformed data', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.flush();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    var context = successCallback.calls[0].args[0].data;</span>
+<span class="cstat-no" title="statement not covered" >                    var assetData = secondLevelData[0];</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context.length).toBe(secondLevelData.length);</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context[0].name).toBe(assetData.assetId);</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context[0].id).toBe(assetData.uri);</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context[0].classification).toBe(assetData.classification);</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context[0].parentId).toBe(assetData.parent);</span>
+<span class="cstat-no" title="statement not covered" >                    expect(context[0].isOpenable).toBe(!(assetData.attributes &amp;&amp; assetData.attributes.isNotOpenable));</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                it('will resolve the promise with empty string in meta.link', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.flush();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    var meta = successCallback.calls[0].args[0].meta;</span>
+<span class="cstat-no" title="statement not covered" >                    expect(meta.link).toBe('');</span>
+                });
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            describe('when getting more children of a node with cursor state and more records to follow', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                var options = {link: baseUrl + '/asset?pageSize=100&amp;topLevelOnly=true&amp;filter=parent=24&amp;cursorState=myCursorState'};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                beforeEach(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    successCallback = jasmine.createSpy('successCallback');</span>
+<span class="cstat-no" title="statement not covered" >                    errorCallback = jasmine.createSpy('errorCallback');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.when('GET', options.link).respond(secondLevelData, {link: '&lt;http://abc.com&gt;;rel=next'});</span>
+<span class="cstat-no" title="statement not covered" >                    PredixAssetService.getAssetsByParentId(24, options).then(successCallback, errorCallback);</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                it('will fetch context root with option link url and rootEntityId 24', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.expectGET(baseUrl + '/asset?pageSize=100&amp;topLevelOnly=true&amp;filter=parent=24&amp;cursorState=myCursorState');</span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.flush();</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                it('will resolve the promise with url in meta.link', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.flush();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    var meta = successCallback.calls[0].args[0].meta;</span>
+<span class="cstat-no" title="statement not covered" >                    expect(meta.link).toBe('http://abc.com');</span>
+                });
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            describe('when getting children with option link is empty', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                var options = {link: ''};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                beforeEach(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    successCallback = jasmine.createSpy('successCallback');</span>
+<span class="cstat-no" title="statement not covered" >                    errorCallback = jasmine.createSpy('errorCallback');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    PredixAssetService.getAssetsByParentId(24, options).then(successCallback, errorCallback);</span>
+<span class="cstat-no" title="statement not covered" >                    $rootScope.$apply();</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                it('will resolve the promise with url in meta.link', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var result = successCallback.calls[0].args[0];</span>
+<span class="cstat-no" title="statement not covered" >                    expect(result.meta.link).toBe('');</span>
+<span class="cstat-no" title="statement not covered" >                    expect(result.data.length).toBe(0);</span>
+                });
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            describe('when response fails getting the children of a node', <span class="fstat-no" title="function not covered" >function() {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                beforeEach(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    successCallback = jasmine.createSpy('successCallback');</span>
+<span class="cstat-no" title="statement not covered" >                    errorCallback = jasmine.createSpy('errorCallback');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.when('GET', baseUrl + '/asset?pageSize=100&amp;topLevelOnly=true&amp;filter=parent=24').respond(500);</span>
+<span class="cstat-no" title="statement not covered" >                    PredixAssetService.getAssetsByParentId(24).then(successCallback, errorCallback);</span>
+<span class="cstat-no" title="statement not covered" >                    $httpBackend.flush();</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                it('reject promise if the GET fails', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    expect(errorCallback).toHaveBeenCalledWith('Error fetching asset with id 24');</span>
+                });
+            });
+&nbsp;
+        });
+    });
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Sep 15 2016 10:43:33 GMT+0530 (India Standard Time)</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

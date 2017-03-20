@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="PhantomJS 1.9.8 (Windows 7 0.0.0)" package="unit" timestamp="2016-09-15T05:13:33" id="0" hostname="01HW805679" tests="5" errors="0" failures="0" time="0.033">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34"/>
+    </properties>
+    <testcase name="should set the url on the context" time="0.015" classname="unit PhantomJS 1.9.8 (Windows 7 0.0.0).Sample controller"/>
+    <testcase name="should render the version" time="0.012" classname="unit PhantomJS 1.9.8 (Windows 7 0.0.0).appVersion directive"/>
+    <testcase name="should turn a string into a slug" time="0.002" classname="unit PhantomJS 1.9.8 (Windows 7 0.0.0).slugify filter"/>
+    <testcase name="should turn a string into a lowercase slug" time="0.002" classname="unit PhantomJS 1.9.8 (Windows 7 0.0.0).slugify filter"/>
+    <testcase name="should return the version" time="0.002" classname="unit PhantomJS 1.9.8 (Windows 7 0.0.0).version service"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>

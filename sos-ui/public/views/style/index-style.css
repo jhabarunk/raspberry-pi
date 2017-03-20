@@ -1,0 +1,52 @@
+	html{
+		overflow-y:auto !important;;
+	}
+	body{margin-bottom:0px !important;}
+	main{
+		min-height:calc(100vh - 4rem) !important;
+	}
+	.viewport{
+		margin:0 !important;
+	}
+	footer a,footer small{color:#000 !important;}
+	.loader{
+		position:absolute;
+		width:calc(100% - 14.6rem);
+		height:100%;
+		background-color:rgba(255,255,255,1);
+		z-index:100;
+	}
+	px-spinner{
+		position:absolute;
+		left:50%;
+		top:50%;
+		margin-left:-25px;
+		margin-top:-25px;
+	}
+	::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	} 
+	/* Track */
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+	} 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		background:#f4f4f4; 
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: #f4c4c4; 
+	}
+	/*IE*/
+	body {
+		-ms-overflow-style: -ms-autohiding-scrollbar;		
+		scrollbar-face-color:#f4f7f4;
+		scrollbar-track-color:#f4f4f4;
+        cursor:default;
+    } 

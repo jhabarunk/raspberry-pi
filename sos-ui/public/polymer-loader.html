@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<script>
+	var DEBUG = true;
+	if(!DEBUG){
+		if(!window.console) window.console = {};
+		var methods = ["log", "debug", "warn", "info"];
+		for(var i=0;i<methods.length;i++){
+			console[methods[i]] = function(){};
+		}
+	}
+</script>
+<!-- import page level css. -->
+<link rel="import" href="bower_components/px-theme/px-app.html">
+<!-- import component theme css variables. -->
+<link rel="import" href="bower_components/px-theme/px-theme.html"/>
+
+<link rel="import" href="bower_components/px-login/px-login.html"/>
+<link rel="import" href="bower_components/px-app-nav/px-app-nav.html"/>
+
+<link rel="import" href="bower_components/px-context-browser/px-context-browser.html"/>
+<link rel="import" href="bower_components/px-card/px-dashboard.html"/>
+<link rel="import" href="bower_components/px-card/px-deck.html"/>
+<link rel="import" href="bower_components/px-card/px-card.html"/>
+
+<!-- <link rel="import" href="cards/rmd-ref-app-ts-card.html"/> -->
+<!-- <link rel="import" href="cards/rmd-ref-app-summary-card.html"/> -->
+<!-- <link rel="import" href="cards/rmd-ref-app-table-card.html"/> -->
+<!-- <link rel="import" href="cards/rmd-ref-app-live-card.html"/> -->
+<!-- <link rel="import" href="cards/compressor-deck.html"/> -->
+<!-- <link rel="import" href="cards/group-deck.html"/> -->
+<link rel="import" href="bower_components/px-data-table/px-data-table.html"/>
+<!-- <link rel="import" href="bower_components/iron-ajax/iron-ajax.html"/> -->
+<link rel="import" href="bower_components/marked-element/marked-element.html"/>
+<link rel="import" href="bower_components/px-dropdown/px-dropdown.html"/>
+<link rel="import" href="bower_components/px-simple-horizontal-bar-chart/px-simple-horizontal-bar-chart.html"/>
+<link rel="import" href="bower_components/px-percent-circle/px-percent-circle.html"/>
+<link rel="import" href="bower_components/px-chart/px-chart.html"/>
+<script>
+	for(var i=0;i<Polymer.telemetry.registrations.length;i++){
+		if(Polymer.telemetry.registrations[i].is == "px-chart"){
+			Polymer.telemetry.registrations[i].updateAxisThreshold=function(t,i,o){var e=t.yAxis||0,s=this.chart.yAxis[e];if(s.removePlotLine(o),"undefined"!=typeof i){var r=t.color;r||(r=this.hasSeries(t.id)?this.chart.get(t.id).options.color:this.chart.options.colors[this.chart.series.length]);var h={dashStyle:"LongDash",color:"red",value:i,id:o,width:1,label:{align:s.options.opposite?"right":"left",style:{fontSize:"0.8rem",color:r},text:i}};s.addPlotLine(h)}};
+			Polymer.telemetry.registrations[i].buildConfig=function(){var t=this,e=function(t,e){return e.map(function(e){var r=t[e];return r?r:void 0})},r={type:"line",marker:{enabled:!1},id:"nav",color:"transparent",lineColor:this.dataVisColors["dv-dark-blue"],lineWidth:1},s={type:this.type,marker:{enabled:!0},id:"nav",lineColor:this.dataVisColors["dv-dark-blue"],lineWidth:0},o={type:"column",marker:{enabled:!0},id:"nav",lineColor:this.dataVisColors["dv-dark-blue"],lineWidth:0},i=function(t){switch(t){case"scatter":return s;case"histogram":case"bar":return o;default:return r}},n=function(t){switch(t){case"histogram":case"bar":return"column";default:return t}},a=function(t){switch(t){case"histogram":return{align:"left",style:{fontSize:"0.8rem",color:"rgb(0,0,0)"},x:3,y:12,formatter:function(){return this.value}};default:return{align:"left",style:{fontSize:"0.8rem",color:"rgb(0,0,0)"},x:3,y:12}}},l=function(t,e,r){return"hc"===r?{}:{shared:!0,useHTML:!0,backgroundColor:"none",borderWidth:0,shadow:!1,padding:0,formatter:function(){for(var e="undefined"==typeof this.points?1:this.points.length,r="undefined"==typeof this.points?[this.point]:this.points,s=['<span class="flex flex--right px-chart-tooltip style-scope px-chart">'],o=0;e>o;o++)s.push('<span class="u-mr-">'),"condensed"===t&&(s.push('<div style="background-color: '),s.push(r[o].series.color),s.push('" class="series-icon"></div>')),s.push('<b class="um-b- u-p0">'),s.push(Math.round(100*r[o].y)/100),s.push(" "),s.push(r[o].series.options.units),s.push("</b>"),"normal"===t&&(s.push('<br/><b style="color: '),s.push(r[o].series.color),s.push('" class="name">'),s.push(r[o].series.name),s.push("</b>")),s.push("</span>");var i=r[0].series.chart.options._polymerRef;if("hide"!==i.tooltipTimestamp){var n=moment(r[0].x);s.push('<span class="u-mr-">'),s.push('<b class="um-b- u-p0">'),"condensed"===t?s.push(n.utcOffset("+0000").format(i.tooltipDatetimeFormat)):(s.push(n.utcOffset("+0000").format(i.tooltipTimeFormat)),s.push("</b>"),s.push("<br/>"),s.push('<b style="color: black" class="name">'),s.push(n.format(i.tooltipDateFormat))),s.push("</b>"),s.push("</span>")}return s.push("</span>"),s.join("")},positioner:function(r,s,o){var i="condensed"===t?40:60,n=this.chart.chartWidth-(r+10),a=this.chart.plotTop-(e>0?e:i);return{x:n,y:a}}}};return{colors:e(this.dataVisColors,this.seriesColorOrder),annotationsOptions:{enabledButtons:!1},chart:{type:n(this.type),events:this.events,height:this.height,margin:this.margin,spacingBottom:this.spacingBottom,plotBorderColor:"rgb(59,59,63)",plotBorderWidth:this.plotBorderWidth,renderTo:this.$.container,style:{fontFamily:"inherit",fontSize:"inherit"},zoomType:this.zoomType,resetZoomButton:this.resetZoomButton,selectionMarkerFill:"rgba(200,231,251,0.5)"},exporting:{chartOptions:{rangeSelector:{enabled:!1}},buttons:{enabled:!0},url:this.exportServerUrl||"javascript:alert('No export-server-url attribute configured on this chart')"},credits:{enabled:!1},legend:this.legend,navigation:{buttonOptions:{enabled:!1}},navigator:{enabled:!this.navigatorDisabled,adaptToUpdatedData:!0,height:50,margin:15,outlineColor:this.dataVisColors["dv-basic-gray"],maskFill:"rgba(200,231,251,0.3)",series:i(this.type),xAxis:{gridLineWidth:0,lineColor:this.dataVisColors["dv-basic-blue"],lineWidth:1,labels:{style:{fontSize:"0.8rem",color:"rgb(0,0,0)"},y:15}},yAxis:{lineColor:this.dataVisColors["dv-dark-blue"],lineWidth:1}},plotOptions:{line:{lineWidth:1,states:{hover:{lineWidth:1}}},scatter:{marker:{enabled:!0}},column:{borderWidth:0,pointPadding:0,grouping:!0,groupPadding:.2},series:{marker:{},events:this.seriesEvents,turboThreshold:20000}},rangeSelector:{enabled:!1},scrollbar:{enabled:!1},title:{text:null},yAxis:{lineColor:"rgb(59,59,63)",tickColor:"rgb(59,59,63)",labels:{style:{color:"rgb(0,0,0)"}},gridLineColor:"rgb(228,228,234)"},xAxis:{events:{afterSetExtremes:function(e){t.fire("after-set-extremes",e)}},labels:a(this.type),lineColor:"rgb(59,59,63)",tickColor:"rgb(59,59,63)",showFirstLabel:!0,showLastLabel:!0,startOnTick:!1,title:{text:null},ordinal:!1},tooltip:l(this.tooltipType,this.tooltipOffset,this.tooltipKind),_polymerRef:this}};
+		}
+	}
+</script>
+<link rel="import" href="bower_components/px-spinner/px-spinner.html"/>
+<link rel="import" href="bower_components/px-modal/px-modal.html"/>
+<link rel="import" href="bower_components/px-datetime-picker/px-datetime-picker.html"/>

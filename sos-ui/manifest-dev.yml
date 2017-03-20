@@ -1,0 +1,13 @@
+---
+applications:
+  - name: shi-dev-welding-app-v1
+    buildpack: predix_openresty_buildpack
+    path: dist
+    memory: 64M
+    stack: cflinuxfs2
+    services:
+            - shi_dev_redis_service # change this to your redis service instance name
+            - shi_dev_view_service # change this to your view service instance name
+    env:
+      UAA_SERVER_URL: https://a47667d2-c82d-4fd1-9c1c-b230cb863847.predix-uaa.run.aws-usw02-pr.ice.predix.io
+      REDIS: redis-17
